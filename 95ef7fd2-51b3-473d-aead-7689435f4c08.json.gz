@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="description" content="UUP dump lets you download Unified Update Platform files, like Windows Insider updates, directly from Windows Update.">
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="og:site_name" content="UUP dump">
+        <meta property="og:title" content="UUP dump">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="UUP dump lets you download Unified Update Platform files, like Windows Insider updates, directly from Windows Update.">
+        <meta property="og:image" content="http://uupdump.net/img/cover.png">
+        <meta property="og:url" content="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz">
+
+        <link rel="stylesheet" href="/css/semantic.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/semantic.min.js"></script>
+
+        <title>UUP dump</title>
+
+        <script>
+            function openLanguageSelector() {
+                $('.ui.modal.select-language').modal('show');
+                $('.ui.sidebar').sidebar('hide');
+            }
+
+            function sidebar() {
+                $('.ui.sidebar').sidebar('setting', 'transition', 'overlay');
+                $('.ui.sidebar').sidebar('setting', 'mobileTransition', 'overlay');
+                $('.ui.sidebar').sidebar('toggle');
+            }
+        </script>
+
+        <style>@import url('css/darkmode.css') (prefers-color-scheme: dark);</style>
+    </head>
+    <body>
+        <div class="ui sidebar inverted vertical menu">
+            <div class="ui container">
+                <a class="active item" href="./"><i class="home icon"></i>Home</a><a class="item" href="known.php"><i class="download icon"></i>Downloads</a><a class="item" href="newbuild.php"><i class="plus circle icon"></i>New build</a><a class="item" target=_blank href="https://github.com/uup-dump-dev/website-public/blob/master/FAQ.md"><i class="question circle icon"></i>FAQ</a> <a class="item light-mode-btn" href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?dark=0">
+    <i class="eye slash icon"></i>
+    Light mode
+</a>
+<a class="item dark-mode-btn" href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?dark=1">
+    <i class="eye icon"></i>
+    Dark mode
+</a><a class="item" target=_blank href="https://github.com/uup-dump"><i class="code icon"></i>Source code</a><a class="item" target=_blank href="https://discord.gg/yVRbtb2"><i class="discord icon"></i>Discord</a><a class="item" onClick="openLanguageSelector();"><i class="globe icon"></i>English (United States)</a>
+            </div>
+        </div>
+        <div class="pusher">
+            <div class="page-header">
+                <div class="ui title container">
+                    <h1 title="UUP dump v3.62.3">
+                        <img src="/img/logo.svg" class="logo" alt="">UUP dump
+                    </h1>
+                </div>
+
+                <div class="ui one column grid page-header-menu">
+                    <div class="ui attached secondary menu computer only column">
+                        <div class="ui container">
+                            <a class="active item" href="./"><i class="home icon"></i>Home</a><a class="item" href="known.php"><i class="download icon"></i>Downloads</a><a class="item" href="newbuild.php"><i class="plus circle icon"></i>New build</a><a class="item" target=_blank href="https://github.com/uup-dump-dev/website-public/blob/master/FAQ.md"><i class="question circle icon"></i>FAQ</a>
+                            <div class="right menu">
+                                <a class="item" onClick="openLanguageSelector();"><i class="globe icon"></i>English (United States)</a><a class="item light-mode-btn" href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?dark=0">
+    <i class="eye slash icon"></i>
+    Light mode
+</a>
+<a class="item dark-mode-btn" href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?dark=1">
+    <i class="eye icon"></i>
+    Dark mode
+</a><a class="item" target=_blank href="https://github.com/uup-dump"><i class="code icon"></i>Source code</a><a class="item" target=_blank href="https://discord.gg/yVRbtb2"><i class="discord icon"></i>Discord</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached secondary menu mobile tablet only column">
+                        <div class="ui container">
+                            <a class="item" onClick="sidebar();"><i class="bars icon"></i>Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+
+            <div class="ui normal mini modal select-language">
+    <div class="header">
+        Please select your language
+    </div>
+    <div class="content">
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=de-de"><i class="de flag"></i>Deutsch</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=en-us"><i class="us flag"></i>English (United States)</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=es-ar"><i class="ar flag"></i>Español (Argentina)</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=fr-fr"><i class="fr flag"></i>Français (France)</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=it-it"><i class="it flag"></i>Italiano</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=hu-hu"><i class="hu flag"></i>Magyar</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=nl-nl"><i class="nl flag"></i>Nederlands</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=pl-pl"><i class="pl flag"></i>polski</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=pt-br"><i class="br flag"></i>Português (Brasil)</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=pt-pt"><i class="pt flag"></i>Português (Portugal)</a></p>
+        <p><a hreF="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=ru-ru"><i class="ru flag"></i>Русский</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=ro-ro"><i class="ro flag"></i>Română (România)</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=tr-tr"><i class="tr flag"></i>Türkçe</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=ar-sa"><i class="sa flag"></i>العربية</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=ko-kr"><i class="kr flag"></i>한국어</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=zh-cn"><i class="cn flag"></i>中文（简体）</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=ja-jp"><i class="jp flag"></i>日本語</a></p>
+        <p><a href="http://uupdump.net/packs/95ef7fd2-51b3-473d-aead-7689435f4c08.json.gz?lang=zh-tw"><i class="tw flag"></i>中文（繁體）</a></p>
+    </div>
+    <div class="actions">
+        <div class="ui ok button">
+            <i class="close icon"></i>
+            Cancel
+        </div>
+    </div>
+</div>
+
+
+            <div class="ui container"><div class="welcome-text">
+    <p class="header">UUP dump</p>
+    <p class="sub"><i>Download UUP files from Windows Update servers with ease.</i></p>
+</div>
+
+<form class="ui form" action="known.php" method="get">
+    <div class="field">
+        <div class="ui big action input">
+            <input type="text" name="q" placeholder="Search for builds...">
+            <button class="ui big blue icon button" type="submit"><i class="search icon"></i></button>
+        </div>
+    </div>
+</form>
+
+<div class="quick-search-buttons">
+    <div class="ui tiny compact menu">
+        <a class="item" href="known.php?q=regex:(2((2(?!000|6[2-4][1-9])\d{3})|(5(?!398)\d{3})|[6-9]\d{3}))\.[1-9]|([3-9]\d{4})\.[1-9]">
+            <i class="search icon"></i>
+            Canary Channel        </a>
+    </div>
+
+    <div class="ui tiny compact menu">
+        <a class="item" href="known.php?q=regex:(2[3-4]\d{3})\.[1-9]">
+            <i class="search icon"></i>
+            Dev Channel        </a>
+    </div>
+
+    <div class="ui tiny compact menu">
+        <div class="ui dropdown item">
+            <i class="search icon"></i>
+            Windows 11
+            <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item" href="known.php?q=regex:Insider.*226[2-4]\d.*a..64">
+                    22H2 Beta
+                </a>
+
+                <a class="item" href="known.php?q=regex:\(2262\d">
+                    22H2
+                </a>
+
+                <a class="item" href="known.php?q=22000">
+                    21H2
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui tiny compact menu">
+        <div class="ui dropdown item">
+            <i class="search icon"></i>
+            Windows Server
+            <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item" href="known.php?q=25398">
+                    23H2
+                </a>
+                <a class="item" href="known.php?q=20349">
+                    22H2
+                </a>
+                <a class="item" href="known.php?q=20348">
+                    21H2
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui tiny compact menu">
+        <div class="ui dropdown item">
+            <i class="search icon"></i>
+            Windows 10
+            <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item" href="known.php?q=19045">
+                    22H2
+                </a>
+
+                <a class="item" href="known.php?q=19044">
+                    21H2
+                </a>
+
+                <a class="item" href="known.php?q=17763">
+                    1809
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>$('.ui.dropdown').dropdown();</script>
+
+<h3 class="ui centered header">
+    <div class="content">
+        <i class="fitted rocket icon"></i>&nbsp;
+        Quick options    </div>
+</h3>
+
+<table class="ui large tablet stackable padded table">
+    <thead>
+        <tr>
+            <th>Release type</th>
+            <th>Description</th>
+            <th>Architectures</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="collapsing">
+                <i class="large box icon"></i>
+                <b>Latest Public Release build</b>
+            </td>
+            <td>Latest updated build for regular users.</td>
+            <td class="center aligned collapsing">
+                <a href="fetchupd.php?arch=amd64&ring=retail&build=22621.1"><button class="ui blue button">x64</button></a>
+                <a href="fetchupd.php?arch=arm64&ring=retail&build=22621.1"><button class="ui button">arm64</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="collapsing">
+                <i class="large fire extinguisher icon"></i>
+                <b>Latest Release Preview build</b>
+            </td>
+            <td>Reliable builds for previewing the next release.<br>Ideal for trying out upcoming releases.</td>
+            <td class="center aligned">
+                <a href="fetchupd.php?arch=amd64&ring=rp&build=22000.1"><button class="ui blue button">x64</button></a>
+                <a href="fetchupd.php?arch=arm64&ring=rp&build=22000.1"><button class="ui button">arm64</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="collapsing">
+                <i class="large fire icon"></i>
+                <b>Latest Beta Channel build</b>
+            </td>
+            <td>Reliable builds with most upcoming features available.<br>Ideal for early adopters.</td>
+            <td class="center aligned">
+                <a href="fetchupd.php?arch=amd64&ring=wis&build=22621.1"><button class="ui blue button">x64</button></a>
+                <a href="fetchupd.php?arch=arm64&ring=wis&build=22621.1"><button class="ui button">arm64</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="collapsing">
+                <i class="large bomb icon"></i>
+                <b>Latest Dev Channel build</b>
+            </td>
+            <td>Somewhat unreliable builds with new ideas and long lead features.<br>Ideal for enthusiasts.</td>
+            <td class="center aligned">
+                <a href="fetchupd.php?arch=amd64&ring=wif&build=22621.1"><button class="ui blue button">x64</button></a>
+                <a href="fetchupd.php?arch=arm64&ring=wif&build=22621.1"><button class="ui button">arm64</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="collapsing">
+                <i class="large bomb icon"></i>
+                <b>Latest Canary Channel build</b>
+            </td>
+            <td>Somewhat unstable builds with latest platform changes and early features.<br>Ideal for highly technical users.</td>
+            <td class="center aligned">
+                <a href="fetchupd.php?arch=amd64&ring=canary&build=latest"><button class="ui blue button">x64</button></a>
+                <a href="fetchupd.php?arch=arm64&ring=canary&build=latest"><button class="ui button">arm64</button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="ui centered header">
+    <div class="content">
+        <i class="fitted star outline icon"></i>&nbsp;
+        Recently added builds    </div>
+</h3>
+
+<div id="recentBuildsTable">
+    <div class="ui segment" style="height: 40em;">
+        <p></p>
+        <div class="ui active dimmer">
+            <div class="ui loader"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+fetch('buildstable.php')
+    .then((response) => response.text())
+    .then((text) => {
+        document.getElementById('recentBuildsTable').innerHTML = text
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+</script>
+                <div class="footer">
+                    <div class="ui divider"></div>
+                    <p><i>
+                        <b>UUP dump</b> v3.62.3
+                        (<b>API</b> v1.40.1)
+                        © 2023 UUP dump authors and contributors.
+                        <span class="info">This project is not affiliated with Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation.</span>
+                    </i></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
